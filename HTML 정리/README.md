@@ -154,13 +154,35 @@ HTML: Hyper Text Markup Language(마크업 언어)
   <label> ID :</label> // 텍스트 박스 전에 뜨는 글자
   // text는 사용자에게 텍스트 입력 기능 제공
   <input type="text"><br> // inline element이므로 한 줄을 다 안잡아서 <br>태그 붙여야함
-
+  ```
+  ```
   // password는 사용자가 입력하는 글자가 dot으로 표기
   <input type="password"><br>
-
+  ```
+  ```
   // submit은 제출 버튼 제공 -> value값 지정해주지 않으면, 디폴트 텍스트로 Submit이 적힘
   <input type="submit" value="Login"><br>
-
+  ```
+  ```
   // reset버튼 제공 -> 입력된 모든 내용 초기화
   <input type="reset"><br>
   ```
+  ```
+  // radio 버튼 - 중복선택을 허용하지 않으려면, name속성에 같은 아이디값을 부여해야함
+  <input type="radio" name="age">
+  <label>항목1</label><br>
+  <input type="radio" name="age">
+  <label>항목2</label><br>
+  ```
+  ```
+  // check 버튼 - 중복선택을 허용
+  <input type="checkbox">
+  <label>항목1</label><br>
+  <input type="checkbox" checked> // 항상 체크되어있음
+  <label>항목2</label><br>
+  ```
+ - input element 속성
+ * autofocus : 페이지 로드 시, 커서가 자동으로 맞춰(깜빡깜빡)
+ * placeholder : 연한 글씨로 뜨는거 (몇자만 입력하세요.) 같은거..
+ * readonly : 입력할 수 없도록 잠금
+ * required : 필수로 입력해야하는 부분, 작성안하면 다음페이지로 이동 불가
