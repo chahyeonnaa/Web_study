@@ -102,3 +102,65 @@ HTML: Hyper Text Markup Language(마크업 언어)
   </table>
 
   ```
+#### 2. HTML Blocks
+* Block elements : \<h1\>~\<h6\>, \<p\>, \<hr\>, \<ul\>, \<ol\>, \<li\>, \<table\>, \<div\>
+  (항상 스크린 너비 전체를 차지하며, 새로운 라인부터 시작)  
+  \<div\> : 컨테이너 생성(구역 나누기)  
+
+  ```
+  <div style="border: 3px solid red">
+    <h2>Lion</h2>
+    <p></p>
+  </div>
+  ```
+
+* Inline elements : \<a\>, \<img\>, \<strong\>, \<i\>, \<em\>, \<sub\>, \<sup\>, \<span\>, \<label\> ,\<input\>
+  (줄바꿈 안함)
+  \<span\> : 텍스트에 컨테이너 생성
+
+  ```
+<body>
+<p> This is an inline span <span style="border: 1px solid black">Hello</span>
+</p>
+  ```
+#### 3. Multimedia elements
+* Audio element, Video element
+```
+\<audio src="파일명" autoplay controls(다양한 속성들)><\audio>
+\<vedio src="파일명" autoplay controls(다양한 속성들)><\vedio>
+```    
+
+* attributes
+  - autoplay : 자동재생
+  - controls : 재생/멈춤 버튼이 보임
+  - loop : 반복재생
+  - muted : 음소거 기능
+  - src : 파일 위치
+  - preload :
+    auto - 비디오 전체가 사전 로딩, 버퍼링X  
+    metadata - 사전로딩 X, 제일먼저 나오는 장면만 보여줌, 동영상 정보 제공(전체길이), 로딩한 것 처럼 보이지만 로딩은 아님  
+    none - 사전로딩 X, 아무것도 안보임
+  ```
+  \<vedio src="파일명" preload="auto"><\vedio>
+  ```
+
+* Form element
+```
+<input type="button" value="Click here!"/> // 클로징 태그 없음
+```  
+
+  - 여러가지 input type
+  ```
+  <label> ID :</label> // 텍스트 박스 전에 뜨는 글자
+  // text는 사용자에게 텍스트 입력 기능 제공
+  <input type="text"><br> // inline element이므로 한 줄을 다 안잡아서 <br>태그 붙여야함
+
+  // password는 사용자가 입력하는 글자가 dot으로 표기
+  <input type="password"><br>
+
+  // submit은 제출 버튼 제공 -> value값 지정해주지 않으면, 디폴트 텍스트로 Submit이 적힘
+  <input type="submit" value="Login"><br>
+
+  // reset버튼 제공 -> 입력된 모든 내용 초기화
+  <input type="reset"><br>
+  ```
