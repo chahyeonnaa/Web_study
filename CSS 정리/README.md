@@ -75,7 +75,7 @@ text-align: center;
 </style>
 ```
 
-4. Universal Selector : 모든 element에 적용, '*'사용
+4. Universal Selector : 모든 element에 적용, '*'사용  
 ```
 <style>
 *{
@@ -85,18 +85,26 @@ color: red;
 </style>
 ```
 
-5. Css Grouping Selector
-• Simple combinatory (comma)
-• Descendant selector (space)
-• Child selector (>)
-• Adjacent sibling selector (+)
-• General sibling selector (~)
+5. Css Grouping Selector  
+• Simple combinatory (comma)  
+• Descendant selector (space) : 자식을 포함한 후손들
+• Child selector (>): 직속 자식들만
+• Adjacent sibling selector (+): 첫번째 태그 바로 뒤에 나오는 형제만  
+• General sibling selector (~): 첫번째 태그 뒤에 오는 모든 형제 선택
 
+6. Attribute Selector
 ```
-<style>
-*{
-text-align: center;
-color: red;
+h1[title]{color:blue;}
+p[class="example"]{color:blue;}
+```
+
+7. Pseudo-class Selector
+```
+selector:pseudo-class{
+  property:value;
 }
-</style>
+ex) a:link
+    a:hover
+    a:active
+    a:visited
 ```
